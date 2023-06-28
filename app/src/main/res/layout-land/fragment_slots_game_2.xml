@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game_2_land">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="12dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_left" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_game_2_slots"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="1.8057692307692307692307692307692"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back"
+        app:layout_constraintVertical_bias="0.696">
+
+        <com.superpow.skill.ui.SlotView
+            android:id="@+id/sv_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.superpow.skill.ui.SlotView
+            android:id="@+id/sv_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.superpow.skill.ui.SlotView
+            android:id="@+id/sv_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.superpow.skill.ui.SlotView
+            android:id="@+id/sv_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.superpow.skill.ui.SlotView
+            android:id="@+id/sv_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:srcCompat="@color/black_44" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_balance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/bg_text"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/container_win"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_300"
+            android:text="@string/balance"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_700"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="631515" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/container_win"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/bg_text"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/container_balance"
+        app:layout_constraintEnd_toStartOf="@id/iv_minus"
+        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintStart_toEndOf="@id/container_balance"
+        app:layout_constraintTop_toTopOf="@+id/container_balance">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_300"
+            android:text="@string/win"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_win"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_700"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="631515" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:layout_marginEnd="10dp"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bet"
+        app:layout_constraintEnd_toStartOf="@id/tv_bet"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@id/container_win"
+        app:layout_constraintTop_toTopOf="@+id/tv_bet"
+
+        app:srcCompat="@drawable/ic_minus_game_1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_bet"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_text"
+        android:fontFamily="@font/montserrat_700"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/container_balance"
+        app:layout_constraintEnd_toStartOf="@id/iv_plus"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/iv_minus"
+        app:layout_constraintTop_toTopOf="@id/container_balance"
+        tools:text="631515" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="2dp"
+        android:layout_marginStart="15dp"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_bet"
+        app:layout_constraintEnd_toStartOf="@+id/bt_play"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintStart_toEndOf="@id/tv_bet"
+        app:layout_constraintTop_toTopOf="@+id/tv_bet"
+        app:srcCompat="@drawable/ic_plus_game_1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_play"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="4dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/montserrat_700"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/play"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@id/container_balance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/iv_plus"
+        app:layout_constraintTop_toTopOf="@+id/container_balance" />
+</androidx.constraintlayout.widget.ConstraintLayout>
